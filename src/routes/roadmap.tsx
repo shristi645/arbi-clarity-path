@@ -58,13 +58,19 @@ function RoadmapPage() {
             <div key={n.title} className="relative">
               {i < NODES.length - 1 && (
                 <svg
-                  className="pointer-events-none absolute left-1/2 top-16 h-28 w-40 -translate-x-1/2"
-                  viewBox="0 0 160 112"
+                  className="pointer-events-none absolute left-0 top-[5.5rem] hidden h-16 w-full sm:block"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
                   fill="none"
                   aria-hidden
                 >
                   <path
-                    d={left ? "M40 0C40 56 120 56 120 112" : "M120 0C120 56 40 56 40 112"}
+                    d={
+                      left
+                        ? "M4.8 0C4.8 62 95.2 38 95.2 100"
+                        : "M95.2 0C95.2 62 4.8 38 4.8 100"
+                    }
+
                     stroke="currentColor"
                     strokeWidth="3"
                     strokeLinecap="round"
