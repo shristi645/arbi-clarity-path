@@ -25,7 +25,7 @@ export const Route = createFileRoute("/settings")({
   component: SettingsPage,
 });
 
-function Row({ label, hint, defaultOn }: { label: string; hint: string; defaultOn?: boolean }) {
+function Row({ label, hint, defaultOn = false }: { label: string; hint: string; defaultOn?: boolean }) {
   return (
     <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-2xl bg-background/55 px-4 py-3.5">
       <div className="min-w-0">
