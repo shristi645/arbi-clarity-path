@@ -154,7 +154,7 @@ function Dashboard() {
           <CardLabel icon={<TrendingUp />} title="Weekly momentum" />
           <div className="flex h-32 items-end gap-3">
             {WEEK.map((v, i) => (
-              <div key={i} className="flex min-w-0 flex-1 flex-col items-center gap-2">
+              <div key={i} className="flex h-full min-w-0 flex-1 flex-col items-center justify-end gap-2">
                 <motion.div
                   className="w-full rounded-t-xl bg-brand-gradient"
                   initial={{ height: 0 }}
