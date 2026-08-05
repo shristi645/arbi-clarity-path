@@ -74,7 +74,7 @@ function RoadmapPage() {
                     stroke="currentColor"
                     strokeWidth="3"
                     strokeLinecap="round"
-                    strokeDasharray="1 10"
+                    strokeDasharray="1 9" vectorEffect="non-scaling-stroke"
                     className={n.state === "locked" ? "text-foreground/15" : "text-primary/60"}
                   />
                 </svg>
