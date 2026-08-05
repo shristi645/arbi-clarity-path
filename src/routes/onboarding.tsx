@@ -55,7 +55,7 @@ function OnboardingPage() {
   const navigate = useNavigate();
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<string[]>([]);
-  const current = STEPS[step];
+  const current = STEPS[step]!;
   const progress = ((step + (answers[step] ? 1 : 0)) / STEPS.length) * 100;
 
   const choose = (opt: string) => {
