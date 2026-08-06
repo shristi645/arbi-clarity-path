@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <defs>
+    <linearGradient id="apple-orb" x1="15" y1="15" x2="165" y2="165" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="55%" stop-color="#e9d5ff"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="apple-path" x1="45" y1="157.5" x2="135" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="40" fill="transparent"/>
+  <circle cx="90" cy="90" r="71.25" fill="url(#apple-orb)" opacity="0.95"/>
+  <path
+    d="M48.75 146.25C75 138.75 82.5 120 75 101.25S75 60 105 48.75"
+    stroke="url(#apple-path)"
+    stroke-width="16.875"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <circle cx="110.625" cy="45" r="12.75" fill="#ffffff" fill-opacity="0.95"/>
+</svg>

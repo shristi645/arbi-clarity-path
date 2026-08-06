@@ -1,0 +1,22 @@
+{
+  "name": "Arbitiza",
+  "short_name": "Arbitiza",
+  "description": "Arbitiza is an AI predictive execution system that turns scattered goals into a calm daily path.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#a5b4fc",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -84,6 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Arbitiza is an AI predictive execution system that turns scattered goals into a calm daily path.",
       },
       { name: "author", content: "Arbitiza" },
+      { name: "theme-color", content: "#a5b4fc" },
+      { name: "msapplication-TileColor", content: "#a5b4fc" },
       { property: "og:title", content: "Arbitiza — Turning Chaos into Daily Clarity" },
       {
         property: "og:description",
@@ -91,7 +93,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Arbitiza is an AI predictive execution system that turns scattered goals into a calm daily path.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Arbitiza" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Arbitiza — Turning Chaos into Daily Clarity" },
+      {
+        name: "twitter:description",
+        content:
+          "Arbitiza is an AI predictive execution system that turns scattered goals into a calm daily path.",
+      },
     ],
     links: [
       {
@@ -104,7 +113,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Figtree:wght@300;400;500;600&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon", sizes: "16x16 32x32" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.svg", type: "image/svg+xml" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ],
   }),
 
