@@ -17,6 +17,8 @@ import { Arbi } from "@/components/arbi";
 import { Button } from "@/components/ui/button";
 import { GlassCard } from "@/components/glass-card";
 import { ArbiCompanion } from "@/components/arbi-companion";
+import { FinalCTA } from "@/components/final-cta";
+import { Footer } from "@/components/footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -314,38 +316,9 @@ function Landing() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="px-5 py-20 sm:px-8">
-        <GlassCard
-          interactive={false}
-          className="mx-auto max-w-4xl px-8 py-16 text-center sm:px-14"
-        >
-          <div className="flex justify-center">
-            <Arbi mood="happy" size={92} />
-          </div>
-          <h2 className="mt-6 text-4xl sm:text-5xl">Your next 90 days can feel calm</h2>
-          <p className="mx-auto mt-4 max-w-lg leading-relaxed text-muted-foreground">
-            Start with one goal. Arbi will handle the rest of the thinking.
-          </p>
-          <div className="mt-9 flex flex-wrap justify-center gap-3">
-            <Button asChild variant="hero" size="xl">
-              <Link to="/signup">
-                Create your account <ArrowRight />
-              </Link>
-            </Button>
-          </div>
-        </GlassCard>
-      </section>
+      <FinalCTA />
 
-      <footer className="px-5 pb-28 sm:px-8">
-        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-t border-border/60 pt-8">
-          <div className="min-w-0">
-            <Logo />
-            <p className="mt-2 text-sm text-muted-foreground">Turning chaos into daily clarity.</p>
-          </div>
-          <p className="shrink-0 text-xs text-muted-foreground">© 2026 Arbitiza</p>
-        </div>
-      </footer>
+      <Footer />
 
       <ArbiCompanion />
     </div>

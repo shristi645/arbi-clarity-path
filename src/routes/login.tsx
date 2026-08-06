@@ -23,6 +23,7 @@ function LoginPage() {
     <AuthLayout
       title="Welcome back"
       subtitle="Your path stayed exactly where you left it."
+      showBackToHome
       footer={
         <>
           New here?{" "}

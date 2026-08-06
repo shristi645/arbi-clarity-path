@@ -1,9 +1,11 @@
 import type { ReactNode } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { motion } from "motion/react";
+import { ArrowLeft } from "lucide-react";
 import { Atmosphere } from "@/components/atmosphere";
 import { Logo } from "@/components/logo";
 import { Arbi, type ArbiMood } from "@/components/arbi";
+import { Button } from "@/components/ui/button";
 
 export function AuthLayout({
   title,
@@ -11,19 +13,45 @@ export function AuthLayout({
   children,
   footer,
   mood = "idle",
+  showBackToHome = false,
 }: {
   title: string;
   subtitle: string;
   children: ReactNode;
   footer?: ReactNode;
   mood?: ArbiMood;
+  showBackToHome?: boolean;
 }) {
+  const navigate = useNavigate();
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center px-5 py-14">
       <Atmosphere />
-      <Link to="/" className="mb-8">
-        <Logo />
-      </Link>
+      <div className="mb-8 flex w-full max-w-md items-center justify-between">
+        {showBackToHome ? (
+          <motion.div
+            initial={{ opacity: 0, x: -12 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => navigate({ to: "/" })}
+              className="gap-1.5 rounded-2xl border-border/70 bg-background/60 text-xs font-medium backdrop-blur-xl transition-all duration-300 hover:border-primary hover:bg-background/85 hover:text-foreground sm:text-sm"
+            >
+              <ArrowLeft className="h-3.5 w-3.5" />
+              <span className="hidden sm:inline">Back to Home</span>
+              <span className="sm:hidden">Home</span>
+            </Button>
+          </motion.div>
+        ) : (
+          <div aria-hidden className="w-[88px]" />
+        )}
+        <Link to="/">
+          <Logo />
+        </Link>
+        <div aria-hidden className="w-[88px]" />
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 20, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}

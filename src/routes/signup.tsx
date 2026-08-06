@@ -30,6 +30,7 @@ function SignupPage() {
       mood="happy"
       title="Let's begin"
       subtitle="One goal is enough to start. Arbi takes it from there."
+      showBackToHome
       footer={
         <>
           Already with us?{" "}
@@ -53,7 +54,21 @@ function SignupPage() {
           Create account <ArrowRight />
         </Button>
         <p className="text-center text-xs leading-relaxed text-muted-foreground">
-          By continuing you agree to our terms and privacy notice.
+          By continuing you agree to our{" "}
+          <Link
+            to="/terms"
+            className="font-medium text-foreground underline-offset-4 outline-none transition-colors duration-200 hover:text-primary hover:underline focus-visible:text-primary focus-visible:underline"
+          >
+            Terms of Service
+          </Link>{" "}
+          and{" "}
+          <Link
+            to="/privacy"
+            className="font-medium text-foreground underline-offset-4 outline-none transition-colors duration-200 hover:text-primary hover:underline focus-visible:text-primary focus-visible:underline"
+          >
+            Privacy Policy
+          </Link>
+          .
         </p>
       </form>
     </AuthLayout>
